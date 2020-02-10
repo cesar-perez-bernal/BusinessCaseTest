@@ -21,46 +21,45 @@ Feature: Login Page
     As a user I should be able to login to the page.
     so I can buy the product
 
-  @tag1 @ignore
   Scenario: The user should be able to log in
     Given The user enter to login page
     When The user enter username as "test800@hotmail.com"
     And The user enter password as "test123"
     And The user clicks on sign in button
     Then The user should be logged correctly
-	@ignore
+    
   Scenario: Entering wrong user and wrong password should display error message
 	  Given The user enter to login page
     When The user enter username as "hello@mai.com"
     And The user enter password as "sjdhasldh"
     And The user clicks on sign in button
     Then The page should display authentication failed
-	@ignore
+
 	Scenario: Entering correct user and wrong password should display error message
 	  Given The user enter to login page
     When The user enter username as "test800@hotmail.com"
     And The user enter password as "test"
     And The user clicks on sign in button
     Then The page should display invalid password
- 	@ignore
+
   Scenario: Entering wrong user and correct password should display error message
 	  Given The user enter to login page
     When The user enter username as "hello@mai.com"
     And The user enter password as "test1234"
     And The user clicks on sign in button
     Then The page should display authentication failed
-	@ignore
+
   Scenario: Entering empty user and empty password should display error message
 	  Given The user enter to login page
     When Now the user clicks on sign in button
     Then The page should display email address required
-	@ignore
+
   Scenario: Entering correct user and empty password should display error message
 	  Given The user enter to login page
     When The user enter username as "test800@hotmail.com"
     And The user clicks on sign in button
     Then The page should display password required
-	@ignore
+
   Scenario: Entering empty user and correct password should display error message
 	  Given The user enter to login page
     When Now the user enter password as "test123"
