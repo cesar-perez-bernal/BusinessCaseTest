@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 			features="src/test/resources/Features",
 			glue= {"stepDefinitions"},
-			tags= {"not @ignore"}
+			tags= {"@tag"}
 			
 			)
 	
